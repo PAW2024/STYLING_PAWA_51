@@ -1,0 +1,12 @@
+<%- include('layouts/main-layout', { body: `
+    <h1>Todo List</h1>
+    <form action="/todo/add" method="POST">
+        <input type="text" name="title" placeholder="Add a new todo">
+        <button type="submit">Add</button>
+    </form>
+    <ul>
+        <% todos.forEach(todo => { %>
+            <li><%= todo.title %></li>
+        <% }); %>
+    </ul>
+` }) %>
